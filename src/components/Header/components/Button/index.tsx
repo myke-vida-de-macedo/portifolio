@@ -15,6 +15,10 @@ const Button = ( { children, onClick, axle, negative }:IPropsButton ) => {
         <Styled 
             initial={axle === "x" ? {x:negative} : {y:negative}}
             animate={axle === "x" ? {x:"0%"} : {y:"0%"}}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{
+                scale: 0.9,
+            }}
             transition={{duration:1}}
             onClick={onClick}>
             { children }
