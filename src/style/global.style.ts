@@ -5,13 +5,17 @@ export default createGlobalStyle`
     *{
         ::-webkit-scrollbar{
             width: 10px;
+
+            background-color: #1b2838;
         }
         ::-webkit-scrollbar-thumb{
             width: 10px;
 
-            background-color: #222;
+            background-color: #171a21;
             border-radius: 4px;
         }
+
+        font-family: 'Inter', sans-serif;
     }
 
     html, body, div, span, applet, object, iframe,
