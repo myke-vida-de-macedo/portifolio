@@ -7,6 +7,8 @@ interface IPropsStyled {
 export const Styled = styled.div<IPropsStyled>`
     box-sizing: border-box;
 
+    cursor: pointer;
+
     width: 60px;
     height: 30px;
 

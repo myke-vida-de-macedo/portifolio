@@ -1,7 +1,11 @@
 import { motion } from "framer-motion"
-import styled  from "styled-components"
+import styled, { css }  from "styled-components"
 
-export const Styled = styled(motion.button)`
+interface IPropsStyled {
+    mediaQuerry?:string;
+}
+
+export const Styled = styled(motion.button)<IPropsStyled>`
     box-sizing: border-box;
 
     margin: 0px 5px;
@@ -20,7 +24,13 @@ export const Styled = styled(motion.button)`
     font-size: 17px;
     font-weight: 600;
     
+   
+
     :hover{
         background-color:rgba(2,2,2,0.1);
+    }
+
+    @media(min-width:${({ mediaQuerry })=> mediaQuerry}){
+        ${({ mediaQuerry })=> mediaQuerry&&css`display:none`}
     }
 `
