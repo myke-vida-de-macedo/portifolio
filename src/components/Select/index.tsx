@@ -1,23 +1,25 @@
 import { motion } from "framer-motion"
+import { v4 as uuid } from "uuid"
 
-import { Styled } from "./style"
+import { Option, Styled } from "./style"
 
 import { IoIosArrowUp } from 'react-icons/io'
 import { IoIosArrowDown } from 'react-icons/io'
 import { useState } from "react"
 
 interface IPropsSelect {
-    placeholder?:string;
+    arrayOptions:string[]
+    onClick?:( value:string ) => void
 }
 
-const Select = ( { placeholder }:IPropsSelect ) => {
+const Select = ( { arrayOptions, onClick }:IPropsSelect ) => {
 
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
-    
+    const [ name, setName ] = useState<string>(arrayOptions[0] as string)
 
     return(
         <Styled onClick={()=>setIsOpen(!isOpen)}>
-            <p className="select__name">{placeholder}</p>
+            <p className="select__name">{ name }</p>
             {
                 isOpen ? <IoIosArrowUp/> : <IoIosArrowDown/>
             }
@@ -26,7 +28,16 @@ const Select = ( { placeholder }:IPropsSelect ) => {
                 animate={{y:"0%", opacity:1}}
                 className="select__list"
             >
-                
+                { arrayOptions.map( value => 
+                    <Option 
+                        style={{
+                            backgroundColor:value === name ? "#edf4fb" : "#FFF"
+                        }}
+                        key={uuid()} 
+                        onClick={()=>{setName(value); onClick&&onClick( value )}}
+                    >
+                        {value}
+                    </Option> )}
             </motion.div>}
         </Styled>
     )

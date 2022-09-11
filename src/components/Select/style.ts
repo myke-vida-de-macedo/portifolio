@@ -5,14 +5,16 @@ export const Styled = styled.div`
 
     position: relative;
 
-    width: 200px;
+    cursor: pointer;
+
+    width: 120px;
     height: 30px;
 
     z-index: 99999;
 
     background-color: #F5F5F5;
 
-    margin: 0px 5px;
+    margin-right: 5px;
 
     border-radius: 4px;
 
@@ -36,11 +38,33 @@ export const Styled = styled.div`
 
         border-radius: 4px;
 
-        width: 200px;
-        height: 100px;
+        width: 120px;
+        height: auto;
 
         z-index: 9999;
 
         background-color: #F5F5F5;
+    }
+`
+
+
+export const Option = styled.div`
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0px 5px;
+
+    border-radius: 2px;
+
+    :hover{
+        background-color: #FFFFFF;
     }
 `
