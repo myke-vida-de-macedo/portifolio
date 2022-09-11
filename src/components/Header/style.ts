@@ -6,14 +6,16 @@ export const Styled = styled(motion.header)`
 
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 10px;
 
     width: 100%;
-    height: 80px;
+    height: 120px;
 
     z-index: 999;
-
-    padding: 0px 50px;
 
     background-color: rgba(23,26,33,0.5);
 
