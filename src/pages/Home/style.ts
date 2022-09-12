@@ -5,5 +5,10 @@ export const HomeStyled = styled.div`
 
     position: relative;
 
+    display: flex;
+    justify-content: center;
+
     background-color: #1b2838;
+
+    overflow: hidden;
 `

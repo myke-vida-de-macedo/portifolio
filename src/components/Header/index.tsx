@@ -1,15 +1,23 @@
 import Select from "../Select"
 import Switch from "../Switch"
 import Button from "./components/Button"
-import Limiter from "./components/Limiter"
+import Limiter from "../Limiter"
 import Logo from "./components/Logo"
 import Modal from "./components/Modal"
 import Nav from "./components/Nav"
 import { Styled } from "./style"
 
 import { HiViewList } from 'react-icons/hi';
+import { useModal } from "../../Provider/Modal"
 
 const Header = () => {
+    
+    const { 
+        leaveModal, 
+        openOrClose
+    } = useModal()
+
+ 
 
     return (
         <Styled>  
@@ -45,11 +53,12 @@ const Header = () => {
                 <Button 
                     axle="x"
                     negative="100%"
-                    onClick={()=>{}}
+                    onClick={openOrClose}
                     mediaQuerry="620px"
                 >
-                <HiViewList size={30}/>
-            </Button>
+                    <HiViewList size={30}/>
+                </Button>
+                {leaveModal&&<Modal/>}
             </Limiter>
         </Styled>   
     )
