@@ -16,7 +16,7 @@ export const Styled = styled(motion.div)`
 
     background-color: rgba(2,2,2,0.1);
 
-    .modal{
+    .background__modal{
         width: 250px;
         height: calc(100vh - 120px);
 
@@ -24,6 +24,8 @@ export const Styled = styled(motion.div)`
 
         background-color: #171a21;
 
+        display: flex;
+        flex-direction: column;
     }
 
     @media(min-width:620px){
