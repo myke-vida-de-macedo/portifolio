@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import { Styled } from "./style"
 
 interface IPropsLimiter {
-    children:ReactNode
+    children:ReactNode;
 }
 
 const Limiter = ( { children }:IPropsLimiter ) => {

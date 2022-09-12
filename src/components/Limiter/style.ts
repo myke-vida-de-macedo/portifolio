@@ -5,8 +5,7 @@ export const Styled = styled.div`
 
     width: 100%;
     max-width: 1600px;
-    height: auto;
-    max-height: 80px;
+    height: 100%;
 
     display: flex;
     justify-content: space-between;

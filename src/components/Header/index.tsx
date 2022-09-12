@@ -1,7 +1,7 @@
 import Select from "../Select"
 import Switch from "../Switch"
 import Button from "./components/Button"
-import Limiter from "./components/Limiter"
+import Limiter from "../Limiter"
 import Logo from "./components/Logo"
 import Modal from "./components/Modal"
 import Nav from "./components/Nav"
@@ -48,8 +48,8 @@ const Header = () => {
                     onClick={()=>{}}
                     mediaQuerry="620px"
                 >
-                <HiViewList size={30}/>
-            </Button>
+                    <HiViewList size={30}/>
+                </Button>
             </Limiter>
         </Styled>   
     )
