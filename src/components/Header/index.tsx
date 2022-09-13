@@ -10,8 +10,12 @@ import { Styled } from "./style"
 import { HiViewList } from 'react-icons/hi';
 import { useModal } from "../../Provider/Modal"
 
+import { useNavigate } from "react-router-dom"
+
 const Header = () => {
-    
+
+    const navigate = useNavigate()
+
     const { 
         leaveModal, 
         openOrClose
@@ -35,9 +39,9 @@ const Header = () => {
                     firstNegative="-200%"
                     secondNegative="-200%"
                     firstName="PORTIFOLIO"
-                    firstOnClick={()=>{}}
+                    firstOnClick={()=>navigate("/home/portifolio")}
                     secondName="RESUMO"
-                    secondOnClick={()=>{}}
+                    secondOnClick={()=>navigate("/home/resume")}
                 />
                 <Logo/>
                 <Nav 
@@ -46,9 +50,9 @@ const Header = () => {
                     firstNegative="200%"
                     secondNegative="200%"
                     firstName="SOBRE"
-                    firstOnClick={()=>{}}
+                    firstOnClick={()=>navigate("/home/sobre")}
                     secondName="CONTATO"
-                    secondOnClick={()=>{}}
+                    secondOnClick={()=>navigate("/home/contato")}
                 />
                 <Button 
                     axle="x"

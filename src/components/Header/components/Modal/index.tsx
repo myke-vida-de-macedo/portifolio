@@ -3,8 +3,11 @@ import { motion } from "framer-motion"
 import { useModal } from "../../../../Provider/Modal"
 import Button from "../Button"
 
+import { useNavigate } from "react-router-dom"
+
 const Modal = () => {
 
+    const navigate = useNavigate()
     const { animationModal } = useModal()
 
     return(
@@ -20,7 +23,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="45%"
-                    onClick={()=>{}}
+                    onClick={()=>navigate("/home/portifolio")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"
@@ -32,7 +35,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="50%"
-                    onClick={()=>{}}
+                    onClick={()=>navigate("/home/resume")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"
@@ -44,7 +47,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="55%"
-                    onClick={()=>{}}
+                    onClick={()=>navigate("/home/sobre")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"
@@ -56,7 +59,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="60%"
-                    onClick={()=>{}}
+                    onClick={()=>navigate("/home/contato")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"

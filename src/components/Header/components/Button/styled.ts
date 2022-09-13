@@ -12,6 +12,8 @@ interface IPropsStyled {
 export const Styled = styled(motion.button)<IPropsStyled>`
     box-sizing: border-box;
 
+    cursor: pointer;
+
     margin: 0px 5px;
 
     ${({ maxWidth }) => maxWidth && css` width:100% `}
