@@ -3,12 +3,13 @@ import { Styled } from "./style"
 
 interface IPropsLimiter {
     children:ReactNode;
+    layoutPosition?: "rowCenter" | "rowExtremity" | "columnCenter" | "columnExtremity";
 }
 
-const Limiter = ( { children }:IPropsLimiter ) => {
+const Limiter = ( { children, layoutPosition }:IPropsLimiter ) => {
 
     return(
-        <Styled>
+        <Styled layoutPosition={layoutPosition}>
             { children }
         </Styled>
     )

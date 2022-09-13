@@ -21,14 +21,14 @@ const Header = () => {
 
     return (
         <Styled>  
-            <Limiter>
+            <Limiter layoutPosition="rowExtremity">
                 <Switch onChange={()=> {}}/>
                 <Select 
                     arrayOptions={["English", "Português"]}
                     onClick={()=>{}}
                 />
             </Limiter>
-            <Limiter>
+            <Limiter layoutPosition="rowExtremity">
                 <Nav 
                     firstAxle="x"
                     secondAxle="x"

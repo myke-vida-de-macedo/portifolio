@@ -8,7 +8,11 @@ interface IPropsBLock {
 const Block = ( { children }:IPropsBLock ) => {
 
     return (
-        <Styled>
+        <Styled
+            initial={{ x:"-40%" }}
+            animate={{ x: "0%" }}
+            transition={{ type: "spring", duration: 1.5 }}
+        >
             { children }
         </Styled>
     )
