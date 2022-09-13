@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const Styled = styled.div`
+interface IPropsStyled {
+    layoutPosition?: "rowCenter" | "rowExtremity" | "columnCenter" | "columnExtremity";
+}
+
+export const Styled = styled.div<IPropsStyled>`
     box-sizing: border-box;
 
     width: 100%;
@@ -8,6 +12,12 @@ export const Styled = styled.div`
     height: 100%;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: ${({ layoutPosition }) => layoutPosition === "rowCenter" || layoutPosition === "rowExtremity" ? "row" : "column" };
+    justify-content: 
+        ${({ layoutPosition }) => 
+            layoutPosition === "rowCenter" || layoutPosition === "columnCenter" ? "center" 
+                : 
+            "space-between" 
+            };
     align-items: center;
 `

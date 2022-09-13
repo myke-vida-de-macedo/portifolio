@@ -10,7 +10,7 @@ const Home = () => {
         <HomeStyled>
             <Header/>
             <Block>
-                <Limiter>
+                <Limiter layoutPosition="columnCenter">
                     <Text/>
                 </Limiter>
             </Block>

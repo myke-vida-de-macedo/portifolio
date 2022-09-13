@@ -11,9 +11,21 @@ interface IPropsButton {
     positionChildren?: "top" | "left" | "bottom" |"right" ;
     radius?: "low" | "medium" | "large";
     duration?:number;
+    color?: "blue" 
 }
 
-const Button = ( { children, onClick, axle, negative, mediaQuerry, maxWidth, positionChildren, radius, duration }:IPropsButton ) => {
+const Button = ( { 
+    children, 
+    onClick, 
+    axle, 
+    negative, 
+    mediaQuerry, 
+    maxWidth, 
+    positionChildren, 
+    radius,
+    duration,
+    color
+}:IPropsButton ) => {
 
 
     return (
@@ -30,6 +42,7 @@ const Button = ( { children, onClick, axle, negative, mediaQuerry, maxWidth, pos
             maxWidth={maxWidth}
             positionChildren={positionChildren}
             radius={radius}
+            color={color}
         >
             { children }
         </Styled>
