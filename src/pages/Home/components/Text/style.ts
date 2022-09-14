@@ -10,7 +10,7 @@ export const Styled = styled(motion.figure)`
 
     width: auto;
     height: auto;
-
+    
     margin: 10px;
 
     .text__title{

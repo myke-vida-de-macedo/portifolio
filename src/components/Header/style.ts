@@ -5,6 +5,8 @@ export const Styled = styled(motion.header)`
     box-sizing: border-box;
 
     position: fixed;
+    top: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
