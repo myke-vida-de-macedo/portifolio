@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom"
 import Button from "../../../../components/Header/components/Button"
 import { Styled } from "./style"
 
 const Text = () => {
+
+    const navigate = useNavigate()
 
     return (
         <Styled>
@@ -9,10 +12,10 @@ const Text = () => {
             <p className="text__description">Front End desenvolvedor</p>
             <Button 
                     axle="x"
-                    negative="500%"
-                    onClick={()=>{}}
+                    negative="100%"
+                    onClick={()=>navigate("/home/about")}
                     radius="medium"
-                    duration={0.8}
+                    duration={0.5}
                     color="blue"
             >
                 Conheça-me

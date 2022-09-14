@@ -47,7 +47,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="55%"
-                    onClick={()=>navigate("/home/sobre")}
+                    onClick={()=>navigate("/home/about")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"
@@ -59,7 +59,7 @@ const Modal = () => {
                 <Button
                     axle="x"
                     negative="60%"
-                    onClick={()=>navigate("/home/contato")}
+                    onClick={()=>navigate("/home/contact")}
                     mediaQuerry="620px"
                     maxWidth
                     positionChildren="left"

@@ -1,19 +1,19 @@
 import { ReactNode } from "react"
 import { Styled } from "./style"
 
-interface IPropsBLock {
+interface IPropsBlock {
     children:ReactNode
 }
 
-const Block = ( { children }:IPropsBLock ) => {
+const Block = ( { children }:IPropsBlock ) => {
 
-    return (
+    return(
         <Styled
             initial={{ x:"-40%" }}
             animate={{ x: "0%" }}
             transition={{ type: "spring", duration: 0.8 }}
         >
-            { children }
+            { children } 
         </Styled>
     )
 }

@@ -50,9 +50,9 @@ const Header = () => {
                     firstNegative="200%"
                     secondNegative="200%"
                     firstName="SOBRE"
-                    firstOnClick={()=>navigate("/home/sobre")}
+                    firstOnClick={()=>navigate("/home/about")}
                     secondName="CONTATO"
-                    secondOnClick={()=>navigate("/home/contato")}
+                    secondOnClick={()=>navigate("/home/contact")}
                 />
                 <Button 
                     axle="x"
