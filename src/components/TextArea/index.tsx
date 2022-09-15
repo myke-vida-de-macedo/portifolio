@@ -1,7 +1,7 @@
-import { useState } from "react"
-import { Styled, Label, Text } from "./style"
+import { useState } from "react";
+import { Styled, Label, Area } from "./style"
 
-interface IPropsInput {
+interface IPropsTextArea {
     placeholder?:string;
     message?:string;
     onChange?:( text:string )=>void;
@@ -11,23 +11,23 @@ interface IPropsInput {
     minX?:string;
 }
 
-const Input = ( { 
-    placeholder, 
+const TextArea = ( {
+    placeholder,
     message, 
-    onChange, 
+    onChange,
     register, 
     name, 
     maxX, 
     minX 
-}:IPropsInput ) => {
+}:IPropsTextArea ) => {
 
     const [ isFocus, setIsFocus ] = useState(false)
     const [ value, setValue ] = useState("")
 
-    onChange&&onChange( value )
+    onChange&&onChange(value)
 
     return(
-        <Styled maxX={maxX} minX={minX}>
+        <Styled maxX={maxX} minX={minX}>    
             <Label 
                 style={
                     isFocus ? {
@@ -39,27 +39,32 @@ const Input = ( {
                     {
                         y:"0%",
                         padding: "10px",
-                        height: "48px",
+                        height: "calc(100% - 2px)",
                         backgroundColor:message ? "#d32f2f" : "#1976d2 "
                     }
                 }
-                htmlFor={ name ? name : "input" }
-            >{ message ? message : placeholder }</Label>
-            <Text
+                htmlFor="textArea"
+            >
+                {placeholder}
+            </Label>
+            <Area
                 {...register&&register(name, {
                     setValueAs: ( text:any ) => {setValue(text) 
                         return text
                     }
                 })}
+                maxX={maxX} 
+                minX={minX}
+                onFocus={()=>!value&&setIsFocus(true)}
+                onBlur={()=>!value&&setIsFocus(false)}
+                id="textArea"
                 focus={isFocus}
                 message={message}
-                id={ name ? name : "input" }
-                type="text" 
-                onBlur={()=>!value&&setIsFocus(false)}
-                onFocus={()=>!value&&setIsFocus(true)}
-            />
+            >
+                
+            </Area>
         </Styled>
     )
 }
 
-export default Input
+export default TextArea

@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 export const Styled = styled(motion.div)`
+    width: 100%;
     height: 100vh;
 
     position: relative;
@@ -13,10 +14,19 @@ export const Styled = styled(motion.div)`
 
     overflow: hidden;
 
-    .teste{
+    .form{
         width: 100%;
+        max-width: 600px;
         height: 100%;
 
         padding:10px ;
+
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+
+        .form__organization{
+            display: flex;
+        }
     }
 ` 
