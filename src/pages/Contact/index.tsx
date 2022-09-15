@@ -59,38 +59,40 @@ const Contact = () => {
             <Header/>
             <Block>
                 <Limiter>
-                    <h2>E-mail: myke.programacao@gmail.com</h2>
+                    
                     <form 
                         onSubmit={handleSubmit(onSubmit)}
                         className="form"
-                    >
+                    >   
+                        <h2 className="block__title">Contato Profissional</h2>
+
                        <div className="form__organization">
                         <Input
                                 placeholder="Nome"
                                 message={name?.message as string}
-                                maxX="600px"
+                                maxX="700px"
                                 name="name"
                                 register={register}
-                            />
-                            <Input
-                                placeholder="Sobrenome"
-                                message={lastname?.message as string}
-                                maxX="600px"
-                                name="lastname"
-                                register={register}
-                            />
+                        />
+                        <Input
+                            placeholder="Sobrenome"
+                            message={lastname?.message as string}
+                            maxX="700px"
+                            name="lastname"
+                            register={register}
+                        />
                        </div>
                         <Input
                             placeholder="E-mail"
                             message={email?.message as string}
-                            maxX="600px"
+                            maxX="700px"
                             name="email"
                             register={register}
                         />
                         <TextArea
                             placeholder="Mensagem"
                             message={message?.message as string}
-                            maxX="600px"
+                            maxX="700px"
                             name="message"
                             register={register}
                         />

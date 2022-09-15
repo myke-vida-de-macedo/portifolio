@@ -53,9 +53,7 @@ export const Styled = styled(motion.figure)`
         align-self: flex-start;
     }
 
-    button{
-        margin: 10px 0px;
-
+    div{
         align-self: flex-end;
     }
 `

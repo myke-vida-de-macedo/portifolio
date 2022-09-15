@@ -58,10 +58,10 @@ export const Area = styled(motion.textarea)<iPropsArea>`
     padding: none;
 
     width:  100%;
-    max-width: ${({ maxX }) => maxX ? maxX : "100%"};
+    max-width: ${({ maxX }) => maxX ? `calc(${maxX} - 10px)` : "100%"};
     min-width: ${({ minX }) => minX ? minX : "100%"};
     height: 100px;
-    min-height: 48px;
+    min-height: 100px;
 
     font-size: 20px;
 
