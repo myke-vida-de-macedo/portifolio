@@ -1,23 +1,17 @@
-import Header from "../../components/Header"
-import Block from "./components/Block"
-import { Styled } from "./style"
+import { useNavigate } from "react-router-dom"
 
-import { useTransform, useViewportScroll } from "framer-motion"
+import Header from "../../components/Header"
+import Block from "../../components/Block"
 import Image from "./components/image"
 import Text from "./components/Text"
-import Limiter from "../../components/Limiter"
 import Paragraph from "./components/Paragraph"
-import Highlight from "./components/Highlight"
 import Button from "../../components/Button"
-import { useNavigate } from "react-router-dom"
+
+import { Styled } from "./style"
 
 const About = () => {
 
     const navigate = useNavigate()
-
-    const { scrollYProgress } = useViewportScroll()
-
-    const teste = useTransform( scrollYProgress, [0, 0.216], ["0%", "50%"] )
 
     return(
         <Styled>
@@ -25,7 +19,6 @@ const About = () => {
             <Block> 
                 <h2 className="about__title">Olá sou Myke, busco minha primeira vaga como Front-End</h2>
                 <div className="about__information">
-              
                     <Image/>
                     <Text>
                         <Paragraph>
@@ -42,9 +35,6 @@ const About = () => {
                             Contato
                         </Button>
                     </Text>   
-
-                    
-   
                 </div>
             </Block>
          
