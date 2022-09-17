@@ -20,5 +20,6 @@ export const Styled = styled(motion.header)`
     z-index: 999;
 
     background-color: rgba(23,26,33,0.5);
+    backdrop-filter: blur(5px);
 
 `
