@@ -1,9 +1,12 @@
 import styled from "styled-components"
 
-export const Styled = styled.div`
+export const Styled = styled.button`
     box-sizing: border-box;
 
     position: relative;
+
+    border: none;
+    outline: 0;
 
     cursor: pointer;
 
@@ -35,6 +38,7 @@ export const Styled = styled.div`
 
         position: absolute;
         top: 32px;
+        left: 0;
 
         border-radius: 4px;
 

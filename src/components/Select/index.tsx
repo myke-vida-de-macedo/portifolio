@@ -18,7 +18,10 @@ const Select = ( { arrayOptions, onClick }:IPropsSelect ) => {
     const [ name, setName ] = useState<string>(arrayOptions[0] as string)
 
     return(
-        <Styled onClick={()=>setIsOpen(!isOpen)}>
+        <Styled 
+            onBlur={()=> isOpen&&setIsOpen(false)}
+            onFocus={()=> !isOpen&&setIsOpen(true)}
+        >
             <p className="select__name">{ name }</p>
             {
                 isOpen ? <IoIosArrowUp/> : <IoIosArrowDown/>

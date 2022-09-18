@@ -23,17 +23,29 @@ const About = () => {
                     <Image/>
                     <Text>
                         <Paragraph>
-                            Lorem ipsum dolor sit amet. 33 omnis mollitia vel itaque quisquam et dolore praesentium aut voluptas laborum eos incidunt sint cum adipisci modi aut laudantium asperiores. Aut nobis nisi non voluptatem dolor ea repudiandae mollitia. Non velit sunt 33 illo deleniti et internos temporibus eum explicabo autem id itaque neque et quam labore qui adipisci provident? Ut animi natus et molestiae eligendi aut architecto reprehenderit et necessitatibus quas et deserunt omnis aut deleniti voluptates.
+                            Sou um desenvolvedor Front-End, que no momento está estudando o back-end,
+                            tenho uma paixão muito grande por programação e tecnologia no geral, adoro criar coisas,
+                            poder desenvolver aplicações no Front-End me trás muita satisfação, eu almejo muito meu progresso
+                            como desenvolvedor e quero poder participar da trajetoria de uma empresa e por crescer com essa experiencia.
                         </Paragraph>
                         <Paragraph>
-                            Lorem ipsum dolor sit amet. 33 omnis mollitia vel itaque quisquam et dolore praesentium aut voluptas laborum eos incidunt sint cum adipisci modi aut laudantium asperiores. Aut nobis nisi non voluptatem dolor ea repudiandae mollitia. Non velit sunt 33 illo deleniti et internos temporibus eum explicabo autem id itaque neque et quam labore qui adipisci provident? Ut animi natus et molestiae eligendi aut architecto reprehenderit et necessitatibus quas et deserunt omnis aut deleniti voluptates.
+                            Adoro no meu tempo livre sempre saber de assuntos sobre Astronomia, e apoio tecnologias que impactam no meio 
+                            ambiente de forma menos agressiva, e gosto de jogar vídeo game.
                         </Paragraph>
                         <Button
                             size="large"
                             onClick={()=>navigate("/home/contact")}
                             marginRigth="200px"
                         >
-                            Contato
+                            CONTATO
+                        </Button>
+
+                        <Button
+                            size="large"
+                            onClick={()=>navigate("/home/portifolio")}
+                            marginRigth="200px"
+                        >
+                            PORTIFOLIO
                         </Button>
                     </Text>   
                 </div>

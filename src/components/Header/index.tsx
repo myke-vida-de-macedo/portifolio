@@ -11,6 +11,7 @@ import { HiViewList } from 'react-icons/hi';
 import { useModal } from "../../Provider/Modal"
 
 import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 const Header = () => {
 
@@ -18,10 +19,11 @@ const Header = () => {
 
     const { 
         leaveModal, 
-        openOrClose
+        openOrClose,
+        closeModalInitial
     } = useModal()
 
- 
+    useEffect(()=>{closeModalInitial()},[])
 
     return (
         <Styled>  

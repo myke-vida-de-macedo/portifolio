@@ -8,6 +8,7 @@ interface IPropsModalContext {
     leaveModal:boolean;
     animationModal:boolean;
     openOrClose:() => void;
+    closeModalInitial:() => void;
 }
 
 const ModalContext = createContext<IPropsModalContext>({} as IPropsModalContext)
@@ -28,11 +29,21 @@ export const ModalProvider = ( { children }:IPropsModalProvider ) => {
         }
     }
 
+    const closeModalInitial = () => {
+
+        if( leaveModal && animationModal ){
+            
+            setLeaveModal(false)
+            setAnimationModal(false)
+        }
+    }
+
     return(
         <ModalContext.Provider value={{
             leaveModal,
             animationModal,
-            openOrClose
+            openOrClose,
+            closeModalInitial
         }}>
             { children }
         </ModalContext.Provider>

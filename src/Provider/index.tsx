@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import { ModalProvider } from "./Modal"
+import { ProjectsProvider } from "./Projects"
 
 interface IPropsProvider {
     children:ReactNode
@@ -7,6 +8,8 @@ interface IPropsProvider {
 
 export const Provider = ( { children }:IPropsProvider ) => (
     <ModalProvider>
-        { children }
+        <ProjectsProvider>
+            { children }
+        </ProjectsProvider>
     </ModalProvider>
 )
