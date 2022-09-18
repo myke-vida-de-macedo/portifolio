@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Text from "../Text";
+import Text from "../../../../components/Text";
 import { Styled } from "./style"
 
 interface IPropsText {

@@ -1,8 +1,16 @@
 import * as yup from 'yup'
 
-export const shemaContact = yup.object().shape({
-    name:yup.string().required( "Nome obrigatorio" ),
-    lastname:yup.string().required( "Sobrenome obrigatorio" ),
-    email:yup.string().required( "Email obrigatorio" ).email("E-mail invalido"),
-    message:yup.string().required( "Mensagem obrigatorio" ),
-})
+import { useTranslation } from "react-i18next"
+
+export const ShemaContact = () => {
+
+    const { t } = useTranslation()
+
+    return yup.object().shape({
+        name:yup.string().required( t("contactRequiredName") ),
+        lastname:yup.string().required( t("contactRequiredLastName") ),
+        email:yup.string().required( t("contactRequiredEmail") ).email( t("contactValidEmail") ),
+        message:yup.string().required( t("contactRequiredMessage") ),
+    })
+}
+

@@ -6,6 +6,7 @@ import About from "../pages/About"
 import Contact from "../pages/Contact"
 import Portifolio from "../pages/Portifolio"
 import Resume from "../pages/Resume"
+import Thank from "../pages/Thank"
 
 const Routers = () => (
 
@@ -16,6 +17,7 @@ const Routers = () => (
             <Route path="/home/resume" element={<Resume/>}/>
             <Route path="/home/about" element={<About/>}/>
             <Route path="/home/contact" element={<Contact/>}/>
+            <Route path="/home/contact/thank" element={<Thank/>}/>
             <Route path="*" element={<Navigate to="/home"/>}/>
         </Routes>
     </AnimatePresence>

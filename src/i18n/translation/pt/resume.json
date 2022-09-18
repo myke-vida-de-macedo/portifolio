@@ -1,0 +1,36 @@
+{
+    "resumeTitle":"Sou desenvolvedor Front-End",
+    "resumeButtonPDF":"Baixar PDF",
+    "resumeText":"Sou desenvolvedor Front-End, estudando Back-End no momento, adoro código limpo e sempre com o objetivo de evoluir, sou apaixonado por programação desde que entrei em contato em 2022, ambicioso em aprender novas tecnologias e aprimorar o os que eu conheço.",
+
+    "resumeEducationSchool1":"Kenzie Academy",
+    "resumeEducationTitle1":"2022 - 2023",
+    "resumeEducationDescription1":"Desenvolvedor Full-Stack",
+    "resumeEducationSchool2":"Colégio Estadual Professora Marilze",
+    "resumeEducationTitle2":"2007 - 2019",
+    "resumeEducationDescription2":"Ensino fundamental e médio",
+
+    "resumeExperienceCompany1":"Kenzie Academy",
+    "resumeExperienceTitle1":"Jul 2022 - Set 2022",
+    "resumeExperienceDescription1":"Monitor",
+    "resumeExperienceCompany2":"George`s Alimentos LTDA",
+    "resumeExperienceTitle2":"2019 - 2021",
+    "resumeExperienceDescription2":"Chapeiro",
+
+    "resumeLanguageTitle1":"Português",
+
+    "resumeInterestName1":"Jogos",
+    "resumeInterestName2":"Astronomia",
+    "resumeInterestName3":"Programação",
+    "resumeInterestName4":"Sustentabilidade",
+    "resumeInterestName5":"Musica",
+    "resumeInterestName6":"Series",
+
+    "resumeCategoryResume":"Resumo",
+    "resumeCategoryExperience":"Experiência",
+    "resumeCategoryEducation":"Educação",
+    "resumeCategoryTechnologies":"Tecnologias",
+    "resumeCategoryTools":"Ferramentas",
+    "resumeCategoryLanguage":"Língua",
+    "resumeCategoryInterest":"Interesse"
+}

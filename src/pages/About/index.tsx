@@ -10,34 +10,34 @@ import Button from "../../components/Button"
 import { Styled } from "./style"
 import Footer from "../../components/Footer/indes"
 
+import { useTranslation } from "react-i18next"
+
 const About = () => {
 
     const navigate = useNavigate()
+
+    const { t } = useTranslation()
 
     return(
         <Styled>
             <Header/>
             <Block> 
-                <h2 className="about__title">Olá sou Myke, busco minha primeira vaga como Front-End</h2>
+                <h2 className="about__title">{t("aboutTitle")}</h2>
                 <div className="about__information">
                     <Image/>
                     <Text>
                         <Paragraph>
-                            Sou um desenvolvedor Front-End, que no momento está estudando o back-end,
-                            tenho uma paixão muito grande por programação e tecnologia no geral, adoro criar coisas,
-                            poder desenvolver aplicações no Front-End me trás muita satisfação, eu almejo muito meu progresso
-                            como desenvolvedor e quero poder participar da trajetoria de uma empresa e por crescer com essa experiencia.
+                            {t("aboutParagraph1")}
                         </Paragraph>
                         <Paragraph>
-                            Adoro no meu tempo livre sempre saber de assuntos sobre Astronomia, e apoio tecnologias que impactam no meio 
-                            ambiente de forma menos agressiva, e gosto de jogar vídeo game.
+                            {t("aboutParagraph2")}
                         </Paragraph>
                         <Button
                             size="large"
                             onClick={()=>navigate("/home/contact")}
                             marginRigth="200px"
                         >
-                            CONTATO
+                            {t("aboutButtonContact")}
                         </Button>
 
                         <Button
@@ -45,7 +45,7 @@ const About = () => {
                             onClick={()=>navigate("/home/portifolio")}
                             marginRigth="200px"
                         >
-                            PORTIFOLIO
+                            {t("aboutButtonPortifolio")}
                         </Button>
                     </Text>   
                 </div>

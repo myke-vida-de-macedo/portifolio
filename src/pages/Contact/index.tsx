@@ -11,12 +11,16 @@ import Block from "../../components/Block"
 
 import { Styled } from "./style"
 
-import { shemaContact } from "../../validation/contact.validation"
+import { ShemaContact } from "../../validation/contact.validation"
 import Footer from "../../components/Footer/indes"
+
+import { useTranslation } from "react-i18next"
 
 const Contact = () => {
     const [ send, setSend ] = useState(false)
     const [ loading, setLoading ] = useState(false)
+
+    const { t } = useTranslation()
 
     const navigate = useNavigate()
 
@@ -32,7 +36,7 @@ const Contact = () => {
             }
         } 
     } = useForm({
-        resolver:yupResolver(shemaContact)
+        resolver:yupResolver(ShemaContact())
     })
 
 
@@ -55,7 +59,7 @@ const Contact = () => {
             body: JSON.stringify(data)
         })
             .then(response => response.json())
-            .then( _ =>{setSend(true); setTimeout(()=>navigate("/home"), 1000 )})
+            .then( _ =>{setSend(true); setTimeout(()=>navigate("/home/contact/thank"), 1000 )})
             .catch( _ => console.log(error));  
     }
 
@@ -67,18 +71,18 @@ const Contact = () => {
                     onSubmit={handleSubmit(onSubmit)}
                     className="form"
                 >   
-                    <h2 className="block__title">Contato Profissional</h2>
+                    <h2 className="block__title">{t("contactTitle")}</h2>
 
                     <div className="form__organization">
                         <Input
-                                placeholder="Nome"
+                                placeholder={t("contactName")}
                                 message={name?.message as string}
                                 maxX="700px"
                                 name="name"
                                 register={register}
                         />
                         <Input
-                            placeholder="Sobrenome"
+                            placeholder={t("contactLastName")}
                             message={lastname?.message as string}
                             maxX="700px"
                             name="lastname"
@@ -86,14 +90,14 @@ const Contact = () => {
                         />
                     </div>
                     <Input
-                        placeholder="E-mail"
+                        placeholder={t("contactEmail")}
                         message={email?.message as string}
                         maxX="700px"
                         name="email"
                         register={register}
                     />
                     <TextArea
-                        placeholder="Mensagem"
+                        placeholder={t("contactMessage")}
                         message={message?.message as string}
                         maxX="700px"
                         name="message"
@@ -102,11 +106,11 @@ const Contact = () => {
                     <Button
                         type="submit"
                         size="large"
-                        message={ error ? "Dados invalidos" : "" }
+                        message={ error ? t("contactButtonValid"): "" }
                         concluded={send}
                         loading={loading}
                     >
-                        ENVIAR
+                        {t("contactButton")}
                     </Button>
                 </form>
             </Block>

@@ -1,0 +1,15 @@
+{
+    "contactTitle":"Professional contact",
+    "contactName":"Name",
+    "contactLastName":"LastName",
+    "contactEmail":"Email",
+    "contactMessage":"Message",
+    "contactButton":"SUBMIT",
+
+    "contactRequiredName":"Mandatory name",
+    "contactRequiredLastName":"Mandatory lastName",
+    "contactRequiredEmail":"Mandatory email",
+    "contactValidEmail":"Invalid email",
+    "contactRequiredMessage":"Mandatory message",
+    "contactButtonValid":"Invalid data"
+}
