@@ -10,6 +10,7 @@ export const Styled = styled.div`
     position: relative;
 
     display: flex;
+    flex-direction: column;
 
     background-color: #1b2838;
 

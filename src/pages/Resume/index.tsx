@@ -15,6 +15,7 @@ import { tools } from "./Data/Tools"
 import { Technologies } from "./Data/Technologies"
 import { education } from "./Data/education"
 import Button from "../../components/Button"
+import Footer from "../../components/Footer/indes"
 
 const Resume = () => {
     
@@ -135,6 +136,7 @@ const Resume = () => {
                 <Button size="medium">Baixar PDF</Button>
 
             </Block>    
+            <Footer/>
         </Styled>
     )
 }

@@ -8,6 +8,7 @@ import Paragraph from "./components/Paragraph"
 import Button from "../../components/Button"
 
 import { Styled } from "./style"
+import Footer from "../../components/Footer/indes"
 
 const About = () => {
 
@@ -37,6 +38,7 @@ const About = () => {
                     </Text>   
                 </div>
             </Block>
+            <Footer/>
          
         </Styled>
     )

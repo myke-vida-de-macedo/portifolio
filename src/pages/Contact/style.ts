@@ -9,7 +9,8 @@ export const Styled = styled(motion.div)`
     position: relative;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     background-color: #1b2838;
 

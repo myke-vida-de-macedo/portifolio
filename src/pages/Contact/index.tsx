@@ -12,6 +12,7 @@ import Block from "../../components/Block"
 import { Styled } from "./style"
 
 import { shemaContact } from "../../validation/contact.validation"
+import Footer from "../../components/Footer/indes"
 
 const Contact = () => {
     const [ send, setSend ] = useState(false)
@@ -109,6 +110,7 @@ const Contact = () => {
                     </Button>
                 </form>
             </Block>
+            <Footer/>
         </Styled>
     )
 }
