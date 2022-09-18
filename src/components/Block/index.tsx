@@ -7,6 +7,7 @@ interface IPropsBlock {
     layoutPosition?: "rowCenter" | "rowExtremity" | "columnCenter" | "columnExtremity";
     postion?: "centerX" | "centerY" ;
     minHeigth?:string;
+    
 }
 
 const Block = ( { children, layoutPosition, postion, minHeigth }:IPropsBlock ) => {

@@ -3,39 +3,45 @@ import Header from "../../components/Header"
 import Category from "./components/Category"
 import ProgressBar from "./components/ProgressBar"
 import Section from "./components/Section"
-import Text from "./components/Text"
-import Title from "./components/Title"
+import Text from "../../components/Text"
+import Title from "../../components/Title"
 
 import { Styled } from "./style"
 
-import { interest } from "./Data/interest"
-import { experience } from "./Data/Experience"
-import { language } from "./Data/language"
+import { Interest } from "./Data/interest"
+import { Experience } from "./Data/Experience"
+import { Language } from "./Data/language"
 import { tools } from "./Data/Tools"
 import { Technologies } from "./Data/Technologies"
-import { education } from "./Data/education"
+import { Education } from "./Data/education"
 import Button from "../../components/Button"
 import Footer from "../../components/Footer/indes"
 
+import { useTranslation } from "react-i18next"
+
 const Resume = () => {
+
+    const { t } = useTranslation()
+
     
+
     return(
         <Styled>
             <Header/>
             <Block> 
 
-                <Title margin="60px" position="center">Sou desenvolvedor Front-End</Title>
+                <Title margin="60px" position="center">{t("resumeTitle")}</Title>
 
-                <Button size="medium">Baixar PDF</Button>
+                <Button size="medium">{t("resumeButtonPDF")}</Button>
 
-                <Section name="Resumo">
-                    <Text>Sou um desenvolvedor Front-End, estudando o Back-End no momento, adoro um código limpo e sempre evoluir nisso, sou apaixonado por programação desde que tive contato em 2022, ambisioso por aprender novas tecnologias e aperfeisoar as que sei.</Text>
+                <Section name={t("resumeCategoryResume")}>
+                    <Text>{t("resumeText")}</Text>
                 </Section>
 
-                <Section name="Experiência">
+                <Section name={t("resumeCategoryExperience")}>
 
                     {
-                        experience.map( ({ company, title, description }) => 
+                        Experience().map( ({ company, title, description }) => 
 
                             <>
                                 <Title size="medium">{ company }</Title>
@@ -47,10 +53,10 @@ const Resume = () => {
 
                 </Section>
 
-                <Section name="Educação">
+                <Section name={t("resumeCategoryEducation")}>
 
                     {   
-                        education.map( ({ school, title, description }) => 
+                        Education().map( ({ school, title, description }) => 
 
                             <>
                                 <Title size="medium">{ school }</Title>
@@ -62,7 +68,7 @@ const Resume = () => {
 
                 </Section>
 
-                <Section name="Tecnologias">
+                <Section name={t("resumeCategoryTechnologies")}>
                     
                     {   
                         Technologies.map( ({ title, percentage }) => 
@@ -79,7 +85,7 @@ const Resume = () => {
 
                 </Section>
 
-                <Section name="Ferramentas">
+                <Section name={t("resumeCategoryTools")}>
 
                     {   
                         tools.map( ({ title, percentage }) => 
@@ -96,10 +102,10 @@ const Resume = () => {
 
                 </Section>
 
-                <Section name="Língua">
+                <Section name={t("resumeCategoryLanguage")}>
 
                     {   
-                        language.map( ({ title, percentage }) => 
+                        Language().map( ({ title, percentage }) => 
 
                             <>
                                 <Title size="medium">{title}</Title>
@@ -113,12 +119,12 @@ const Resume = () => {
 
                 </Section>
 
-                <Section name="Interesse">
+                <Section name={t("resumeCategoryInterest")}>
 
                     <div className="section__wrap"> 
 
                         {
-                            interest.map( ({ name, SVG }) => 
+                            Interest().map( ({ name, SVG }) => 
 
                                 <Category 
                                     margin={"10px"}
@@ -133,7 +139,7 @@ const Resume = () => {
 
                 </Section>
             
-                <Button size="medium">Baixar PDF</Button>
+                <Button size="medium">{t("resumeButtonPDF")}</Button>
 
             </Block>    
             <Footer/>

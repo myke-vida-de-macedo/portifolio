@@ -1,7 +1,7 @@
 import { Styled, Link } from "./style"
 
 import { AiFillLinkedin } from 'react-icons/ai';
-import Title from "../../pages/Resume/components/Title";
+import Title from "../Title";
 import Block from "../Block";
 
 const Footer = () => {

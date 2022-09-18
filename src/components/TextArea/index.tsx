@@ -45,7 +45,7 @@ const TextArea = ( {
                 }
                 htmlFor="textArea"
             >
-                {placeholder}
+                {message ? message : placeholder}
             </Label>
             <Area
                 {...register&&register(name, {

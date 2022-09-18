@@ -13,6 +13,8 @@ import { useModal } from "../../Provider/Modal"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 
+import { useTranslation } from "react-i18next"
+
 const Header = () => {
 
     const navigate = useNavigate()
@@ -25,13 +27,20 @@ const Header = () => {
 
     useEffect(()=>{closeModalInitial()},[])
 
+    const { i18n } = useTranslation()
+
     return (
         <Styled>  
             <Limiter layoutPosition="rowExtremity">
                 <Switch onChange={()=> {}}/>
                 <Select 
                     arrayOptions={["English", "Português"]}
-                    onClick={()=>{}}
+                    onClick={( text )=>{
+
+                        const value = text == "English" ? "en" : "pt"
+
+                        i18n.changeLanguage( value )
+                    }}
                 />
             </Limiter>
             <Limiter layoutPosition="rowExtremity">

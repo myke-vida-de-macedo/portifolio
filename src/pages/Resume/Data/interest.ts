@@ -5,29 +5,36 @@ import { CgTrees } from 'react-icons/cg';
 import { GiMusicalNotes } from 'react-icons/gi';
 import { RiMovieLine } from 'react-icons/ri';
 
-export const interest = [
-    {
-        name:"Jogos",
-        SVG:TbDeviceGamepad,
-    }, 
-    {
-        name:"Astronomia",
-        SVG:GiSpaceship,
-    },
-    {
-        name:"Programação",
-        SVG:FaLaptopCode,
-    },
-    {
-        name:"Sustentabilidade",
-        SVG:CgTrees,
-    },
-    {
-        name:"Musica",
-        SVG:GiMusicalNotes,
-    },
-    {
-        name:"Series",
-        SVG:RiMovieLine,
-    },
-]
+import { useTranslation } from "react-i18next"
+
+export const Interest = () => {
+
+    const { t } = useTranslation()
+
+    return [
+        {
+            name:t("resumeInterestName1"),
+            SVG:TbDeviceGamepad,
+        }, 
+        {
+            name:t("resumeInterestName2"),
+            SVG:GiSpaceship,
+        },
+        {
+            name:t("resumeInterestName3"),
+            SVG:FaLaptopCode,
+        },
+        {
+            name:t("resumeInterestName4"),
+            SVG:CgTrees,
+        },
+        {
+            name:t("resumeInterestName5"),
+            SVG:GiMusicalNotes,
+        },
+        {
+            name:t("resumeInterestName6"),
+            SVG:RiMovieLine,
+        },
+    ]
+}

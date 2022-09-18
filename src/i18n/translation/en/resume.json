@@ -1,0 +1,36 @@
+{   
+    "resumeTitle":"I'm a Front End Developer",
+    "resumeButtonPDF":"Download PDF",
+    "resumeText":"I'm a Front-End developer, studying Back-End at the moment, I love clean code and always aiming to evolve, I've been passionate about programming since I got in touch in 2022, ambitious to learn new technologies and improve the ones I know.",
+
+    "resumeEducationSchool1":"Kenzie Academy",
+    "resumeEducationTitle1":"2022 - 2023",
+    "resumeEducationDescription1":"Full-Stack Developer",
+    "resumeEducationSchool2":"State College Professor Marilze",
+    "resumeEducationTitle2":"2007 - 2019",
+    "resumeEducationDescription2":"Elementary and high school",
+
+    "resumeExperienceCompany1":"Kenzie Academy",
+    "resumeExperienceTitle1":"Jul 2022 - Set 2022",
+    "resumeExperienceDescription1":"Monitor",
+    "resumeExperienceCompany2":"George`s Foods LTDA",
+    "resumeExperienceTitle2":"2019 - 2021",
+    "resumeExperienceDescription2":"Chapeiro",
+
+    "resumeLanguageTitle1":"Portuguese",
+
+    "resumeInterestName1":"Games",
+    "resumeInterestName2":"Astronomy",
+    "resumeInterestName3":"programming",
+    "resumeInterestName4":"Sustainability",
+    "resumeInterestName5":"Music",
+    "resumeInterestName6":"Series",
+
+    "resumeCategoryResume":"Resume",
+    "resumeCategoryExperience":"Experience",
+    "resumeCategoryEducation":"Education",
+    "resumeCategoryTechnologies":"Technologies",
+    "resumeCategoryTools":"Tools",
+    "resumeCategoryLanguage":"Language",
+    "resumeCategoryInterest":"Interest"
+}
