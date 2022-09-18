@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const Styled = styled.div`
+    box-sizing: border-box;
 
     width: 100%;
     height: 100%;
@@ -12,8 +13,6 @@ export const Styled = styled.div`
     justify-content: center;
 
     background-color: #1b2838;
-
-    overflow: hidden;
 
     .block__title{
         font-size: 30px;

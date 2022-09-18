@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
 
-    *{
+    *{  
+
         ::-webkit-scrollbar{
             width: 10px;
 

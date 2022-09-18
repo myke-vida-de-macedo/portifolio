@@ -5,6 +5,7 @@ import Home from "../pages/Home"
 import About from "../pages/About"
 import Contact from "../pages/Contact"
 import Portifolio from "../pages/Portifolio"
+import Resume from "../pages/Resume"
 
 const Routers = () => (
 
@@ -12,7 +13,7 @@ const Routers = () => (
         <Routes>
             <Route path="/home" element={<Home/>}/>
             <Route path="/home/portifolio" element={<Portifolio/>}/>
-            <Route path="/home/resume" element={<Home/>}/>
+            <Route path="/home/resume" element={<Resume/>}/>
             <Route path="/home/about" element={<About/>}/>
             <Route path="/home/contact" element={<Contact/>}/>
             <Route path="*" element={<Navigate to="/home"/>}/>

@@ -19,6 +19,7 @@ const Nav = ( { firstOnClick, secondOnClick, firstName, secondName, firstAxle, s
                 axle={firstAxle}
                 negative={firstNegative}
                 onClick={firstOnClick}
+                duration={0.5}
             >
                 { firstName }
             </Button>
@@ -26,6 +27,7 @@ const Nav = ( { firstOnClick, secondOnClick, firstName, secondName, firstAxle, s
                 axle={secondAxle}
                 negative={secondNegative}
                 onClick={secondOnClick}
+                duration={0.5}
             >
                 { secondName }
             </Button>
