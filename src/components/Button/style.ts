@@ -59,6 +59,8 @@ export const Btn = styled(motion.button)<IPropsBtn>`
     top:0;
     left: 2px;
 
+    cursor: pointer;
+
     width: auto;
     height: ${({ size }) => 
         size === "small" ? "38px"           

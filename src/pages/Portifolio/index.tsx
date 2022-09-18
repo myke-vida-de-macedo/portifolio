@@ -5,6 +5,7 @@ import { Styled } from "./style"
 
 import { data } from "../../data/project"
 import Select from "../../components/Select"
+import Footer from "../../components/Footer/indes"
 
 const Portifolio = () => {
 
@@ -20,6 +21,7 @@ const Portifolio = () => {
                 </div>
                 <List arrayObj={data}/>
             </Block>
+            <Footer/>
         </Styled>
     )
 }

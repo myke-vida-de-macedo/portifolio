@@ -10,7 +10,8 @@ export const Styled = styled.div`
     position: relative;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items:center;
 
     background-color: #1b2838;
 
