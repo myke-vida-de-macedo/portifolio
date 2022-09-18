@@ -12,6 +12,7 @@ interface IPropsButton {
     concluded?:boolean;
     marginRigth?:string;
     loading?:boolean;
+    position?: "start" | "end" 
 }
 
 const Button = ( { 
@@ -22,14 +23,15 @@ const Button = ( {
     type,
     concluded,
     marginRigth,
-    loading
+    loading,
+    position
 }:IPropsButton ) => {
 
     const [ hover, setHover ] = useState(false)
 
 
     return(
-        <Styled marginRigth={marginRigth} message={message} size={size} >
+        <Styled marginRigth={marginRigth} message={message} size={size} position={position}>
             <Btn    
                 disabled={concluded}
                 type={type ? type : "button"}

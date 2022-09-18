@@ -7,6 +7,7 @@ interface IPropsStyled {
     size: "small" | "medium" | "large";
     message?:string;
     marginRigth?:string;
+    position?: "start" | "end" 
 }
 
 export const Styled = styled(motion.div)<IPropsStyled>`
@@ -28,6 +29,16 @@ export const Styled = styled(motion.div)<IPropsStyled>`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    align-self:${({ position }) => 
+        
+        position === "start" ? "flex-start"
+        :
+        position === "end" ? "flex-end" 
+        :
+        "none"
+
+    };
 
     margin: 20px ${({ marginRigth })=> marginRigth ? marginRigth : "123px" } 40px 5px;
 
