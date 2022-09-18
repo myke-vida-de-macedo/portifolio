@@ -2,16 +2,25 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
 
-    *{
+    *{  
+
         ::-webkit-scrollbar{
             width: 10px;
+
+            background-color: #1b2838;
         }
         ::-webkit-scrollbar-thumb{
             width: 10px;
 
-            background-color: #222;
+            background-color: #171a21;
             border-radius: 4px;
         }
+
+        font-family: 'Inter', sans-serif;
+    }
+
+    body{
+        overflow: hidden scroll;
     }
 
     html, body, div, span, applet, object, iframe,
@@ -33,6 +42,7 @@ export default createGlobalStyle`
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
+        font-family: 'Inter', sans-serif;
     }
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
