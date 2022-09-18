@@ -2,7 +2,7 @@ import Card from "../Card";
 import { Styled } from "./style"
 
 interface IPropsList {
-    arrayObj:IProject[];
+    arrayObj?:IProject[];
 }
 
 export interface IProject {
@@ -24,7 +24,7 @@ const List = ( { arrayObj }:IPropsList ) => {
     return(
         <Styled>
             {
-                arrayObj.map(( obj )=><Card Project={obj}/>)
+                arrayObj&&arrayObj.map(( obj )=><Card Project={obj}/>)
             }
         </Styled>
     )

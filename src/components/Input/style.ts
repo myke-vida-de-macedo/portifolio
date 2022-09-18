@@ -8,7 +8,7 @@ interface IPropsStyled {
 
 export const Styled = styled.div<IPropsStyled>`
     box-sizing: border-box;
-    
+
     width: 100%;
     max-width: ${({ maxX }) => maxX ? maxX : "none"};
     min-width: ${({ minX }) => minX ? minX : "none"};

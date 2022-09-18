@@ -6,8 +6,15 @@ import { Styled } from "./style"
 import { data } from "../../data/project"
 import Select from "../../components/Select"
 import Footer from "../../components/Footer/indes"
+import Button from "../../components/Button"
+import { useNavigate } from "react-router-dom"
+import { useProjects } from "../../Provider/Projects"
 
 const Portifolio = () => {
+
+    const navigate = useNavigate()
+
+    const { project, filter } = useProjects()
 
     return(
         <Styled>
@@ -16,10 +23,19 @@ const Portifolio = () => {
                 <div className="block__navegation">
                     <h3 className="block__title">Projetos</h3>
                     <Select
-                        arrayOptions={["All", "React", "JS Native"]}
+                        onClick={( text )=>filter( text )}
+                        arrayOptions={["All", "React", "JS Native", "Crescente", "Decrescente"]}
                     />
                 </div>
-                <List arrayObj={data}/>
+                <List arrayObj={project}/>
+                <Button
+                    size="large"
+                    onClick={()=>navigate("/home/resume")}
+                    marginRigth="200px"
+                >
+                    RESUMO
+                </Button>
+
             </Block>
             <Footer/>
         </Styled>
