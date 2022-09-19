@@ -34,13 +34,13 @@ export const ProjectsProvider = ( { children }:IPropsProjectsProvider ) => {
             }
         }
 
-        if(  category === "Crescente" ){
+        if( category === "Crescente" || category === "Crescent" ){
 
             const filterProject = [...project].sort( ( a, b ) => a.id - b.id)
             setProject( filterProject )
         }
 
-        if(  category === "Decrescente" ){
+        if( category === "Decrescente" || category === "Descending"){
 
             const filterProject = [...project].sort( ( a, b ) => b.id - a.id)
             setProject( filterProject )
