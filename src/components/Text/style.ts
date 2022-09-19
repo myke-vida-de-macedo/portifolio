@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 interface IPropsText {
     margin?:string;
+    color?:string;
 }
 
 export const Styled = styled.p<IPropsText>`
@@ -10,7 +11,7 @@ export const Styled = styled.p<IPropsText>`
     font-size: 15px;
     font-weight: 300;
 
-    color: #F5F5F5;
+    color: ${({ color })=>  color ? color : "#F5F5F5" };
 
     text-align: start;
 
