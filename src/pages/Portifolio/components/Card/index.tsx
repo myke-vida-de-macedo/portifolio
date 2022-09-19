@@ -16,6 +16,7 @@ const Card = ( { Project:{ image, vercel, gitHub, name, info } }:IPropsCard ) =>
 
     const [ hover, setHover ] = useState(false)
     const [ hoverInfo, setHoverInfo ] = useState(false)
+    const [ hoverGit, setHoverGit ] = useState(false)
 
     return(
         <Styled 
@@ -38,8 +39,25 @@ const Card = ( { Project:{ image, vercel, gitHub, name, info } }:IPropsCard ) =>
                     <Link href={vercel} target="_blank">
                         <TbBrandVercel/>
                     </Link>
-                    <Link href={gitHub} target="_blank">
+                    <Link 
+                        onMouseEnter={()=>setHoverGit(true)}
+                        onMouseLeave={()=>setHoverGit(false)}
+                        href={gitHub} 
+                        target="_blank"
+                    >
                         <AiFillGithub/>
+                        {hoverGit&&<Info
+                            style={
+                                hoverGit ? {
+                                    opacity: 1,
+                                }:
+                                {
+                                    opacity: 0,
+                                }
+                            }  
+                        >
+                            <p>Autorização: {info?.authorization}</p>
+                        </Info>}
                     </Link>
                     {info&&<Link 
                         onMouseEnter={()=>setHoverInfo(true)}
@@ -56,8 +74,9 @@ const Card = ( { Project:{ image, vercel, gitHub, name, info } }:IPropsCard ) =>
                                 }
                             }  
                         >
-                            <p>Email: {info.email}</p>
-                            <p>Senha: {info.password}</p>
+                            {info.email != "" && <p>Email: {info.email}</p>}
+                            {info.password != "" && <p>Senha: {info.password}</p>}
+                            <p>Autorização: {info.authorization}</p>
                         </Info>}
                     </Link>}
                 </div>
