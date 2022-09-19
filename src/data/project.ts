@@ -68,7 +68,7 @@ export const data = [
         vercel:"https://weartake-two.vercel.app" 
     },  
     {   
-        id:8,
+        id:9,
         name:"Portifolio", 
         level:"React",
         image:"../assets/Portifolio.png", 
