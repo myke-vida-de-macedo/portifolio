@@ -6,7 +6,11 @@ import Title from "../../components/Title"
 
 import { HomeStyled } from "./style"
 
+import { useTranslation } from "react-i18next"
+
 const Thank = () => {
+
+    const { t } = useTranslation()
 
     const navigate = useNavigate()
 
@@ -19,21 +23,21 @@ const Thank = () => {
                 position="start"
                 onClick={()=>navigate("/home")}
             >
-                Voltar
+                {t("thankBack")}
             </Button>
               
         </Block>    
 
             <Block layoutPosition="columnCenter" postion="centerY" minHeigth="calc(100vh - 178px)">
                 
-                <Title>Muito obrigado</Title>
-                <Text>Enquanto isso que tal uma olhada nos meus projetos?</Text>
+                <Title>{t("thankThank")}</Title>
+                <Text>{t("thankDescription")}</Text>
                 <div className="block__button">
                     <Button 
                         size="large"
                         onClick={()=>navigate("/home/portifolio")}
                     >
-                        Projetos
+                        {t("thankProjects")}
                     </Button>
                 </div>
 

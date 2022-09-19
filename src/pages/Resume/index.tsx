@@ -23,8 +23,6 @@ const Resume = () => {
 
     const { t } = useTranslation()
 
-    
-
     return(
         <Styled>
             <Header/>
