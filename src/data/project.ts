@@ -49,7 +49,7 @@ export const data = [
         },
         image:"../assets/KenzieHabits.png", 
         gitHub:"https://github.com/myke-vida-de-macedo/KenzieHabits", 
-        vercel:"" 
+        vercel:"https://kenzie-habits-2t5ilg4o5-anonymus-dark.vercel.app/" 
     },
     {   
         id:8,
