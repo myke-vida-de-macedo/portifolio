@@ -19,7 +19,11 @@ import Footer from "../../components/Footer/indes"
 
 import { useTranslation } from "react-i18next"
 
+import { useNavigate } from "react-router-dom"
+
 const Resume = () => {
+
+    const navigate = useNavigate()
 
     const { t } = useTranslation()
 
@@ -30,7 +34,7 @@ const Resume = () => {
 
                 <Title margin="60px" position="center">{t("resumeTitle")}</Title>
 
-                <Button size="medium" onClick={()=>{}}>{t("resumeButtonPDF")}</Button>
+                <Button size="medium" onClick={()=>navigate("/home/resume/cv")}>{t("resumeButtonPDF")}</Button>
 
                 <Section name={t("resumeCategoryResume")}>
                     <Text>{t("resumeText")}</Text>
@@ -137,7 +141,7 @@ const Resume = () => {
 
                 </Section>
             
-                <Button size="medium">{t("resumeButtonPDF")}</Button>
+                <Button onClick={()=>navigate("/home/resume/cv")} size="medium">{t("resumeButtonPDF")}</Button>
 
             </Block>    
             <Footer/>

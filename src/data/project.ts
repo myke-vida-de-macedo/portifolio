@@ -67,4 +67,12 @@ export const data = [
         gitHub:"https://github.com/myke-vida-de-macedo/E-commerce", 
         vercel:"https://weartake-two.vercel.app" 
     },  
+    {   
+        id:8,
+        name:"Portifolio", 
+        level:"React",
+        image:"../assets/Portifolio.png", 
+        gitHub:"https://github.com/myke-vida-de-macedo/portifolio", 
+        vercel:"portifolio-ezvpg43v6-anonymus-dark.vercel.app" 
+    },  
 ]

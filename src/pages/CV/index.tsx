@@ -12,8 +12,22 @@ import { CgTrees } from 'react-icons/cg';
 import { GiMusicalNotes } from 'react-icons/gi';
 import { RiMovieLine } from 'react-icons/ri';
 
+import { IoLocationOutline } from 'react-icons/io5';
+import { TbBrandVercel } from 'react-icons/tb';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsTelephoneForward } from 'react-icons/bs';
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
 const CV = () => {
+
+    const navigate = useNavigate()
+
+    useEffect(()=> {
+        setTimeout(()=> window.print(),200)
+        setTimeout(()=> navigate("/home/resume"),400)
+    },[])
+
     return (
         <HomeStyled>
           
@@ -34,26 +48,26 @@ const CV = () => {
                     <Section>Contato</Section>
 
                         <Category border="none" colorSVG="blue" colorName="#222" margin="5px" size="cv" name="(41) 99890-3373">
-                            <TbDeviceGamepad/>
+                            <BsTelephoneForward/>
                         </Category>
 
                         <Category border="none" colorSVG="blue" colorName="#222" margin="5px" size="cv" name="myke.programacao@gmail.com">
-                            <TbDeviceGamepad/>
+                            <AiOutlineMail/>
                         </Category>
 
-                        <Category border="none" colorSVG="blue" colorName="#222" margin="5px" size="cv" name="https://Teste">
-                            <TbDeviceGamepad/>
+                        <Category border="none" colorSVG="blue" colorName="#222" margin="5px" size="cv" name="https://portifolio-lake-omega.vercel.app">
+                            <TbBrandVercel/>
                         </Category>
 
                         <Category border="none" colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Araucaria/PR - Brasil">
-                            <TbDeviceGamepad/>
+                            <IoLocationOutline/>
                         </Category>
 
                     <Section>Educação</Section>
 
                         <Title margin="5px 0px 5px 10px" size="medium">Kenzie Academy</Title>
                         <Title margin="0px 0px 0px 10px" size="low">Mar 2022 - Mar 2023</Title>
-                        <Text margin="0px 0px 20px 15px" color="#222">nada</Text>
+                        <Text margin="0px 0px 20px 15px" color="#222">Desenvolvedor Full-Stack</Text>
                         
                         <Title margin="5px 0px 5px 10px" size="medium">Colégio Estadual Professora Marilze</Title>
                         <Title margin="0px 0px 0px 10px" size="low">2007 - 2019</Title>
@@ -62,7 +76,7 @@ const CV = () => {
                     <Section>Linguas</Section>
 
                         <Title margin="0px 0px 0px 10px" size="low">Português</Title>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={100}/>
 
                     <Section>Interesse</Section>
 
@@ -71,23 +85,23 @@ const CV = () => {
                                 <TbDeviceGamepad/>
                             </Category>
 
-                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Jogos">
+                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Astronomia">
                                 <GiSpaceship/>
                             </Category>
 
-                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Jogos">
+                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Programação">
                                 <FaLaptopCode/>
                             </Category>
 
-                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Jogos">
+                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Sustentabilidade">
                                 <CgTrees/>
                             </Category>
 
-                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Jogos">
+                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Musica">
                                 <GiMusicalNotes/>
                             </Category>
 
-                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Jogos">
+                            <Category colorSVG="blue" colorName="#222" margin="5px" size="cv" name="Series">
                                 <RiMovieLine/>
                             </Category>
                        </div>
@@ -103,25 +117,25 @@ const CV = () => {
                     <Experience>
                         <div className="experience__a">
 
-                            <Title margin="0px 0px 0px 10px" size="low">Jul 2022 - Set 2023</Title>
+                            <Title margin="0px 0px 5px 10px" size="low">Jul - Set / 2022</Title>
                             <Text margin="0px 0px 20px 15px" color="#222">Kenzie Academy</Text>
 
                         </div>
                         <div className="experience__b">
-                            <Title margin="0px 0px 0px 10px" size="medium">Monior</Title>
-                            <Text margin="0px 0px 20px 10px" color="#222">Auxiliava devs com bugs, ou para melhorar o entendimento sobre algo, correção tarefas e daily diaria</Text>
+                            <Title margin="0px 0px 5px 10px" size="medium">Monior</Title>
+                            <Text margin="0px 0px 20px 10px" color="#222">Como monitor meu papel era é apoio, ajudando os alunos a explorar pontos-chave como organização, comunicação e resolução de desafios.</Text>
                         </div>
                     </Experience>
 
                     <Experience>
                         <div className="experience__a">
 
-                            <Title margin="0px 0px 0px 10px" size="low">2019 - 2021</Title>
+                            <Title margin="0px 0px 5px 10px" size="low">2019 - 2021</Title>
                             <Text margin="0px 0px 20px 15px" color="#222">George`s Alimentos LTDA</Text>
 
                         </div>
                         <div className="experience__b">
-                            <Title margin="0px 0px 0px 10px" size="medium">Chapeiro</Title>
+                            <Title margin="0px 0px 5px 10px" size="medium">Chapeiro</Title>
                             <Text margin="0px 0px 20px 10px" color="#222">Cuidava da chapa, e preparação dos pratos, mais poderia ser colocado em qualquer outro setor, como atendimento( caixa ), cozinha, limpeza, reabastecimento, no que tivesse necessidade.</Text>
                         </div>
                     </Experience>
@@ -130,31 +144,31 @@ const CV = () => {
 
                     <Skill>
                         <h3>HTML</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={90}/>
                     </Skill>
                     <Skill>
                         <h3>CSS</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={90}/>
                     </Skill>
                     <Skill>
                         <h3>Javascript</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={90}/>
                     </Skill>
                     <Skill>
                         <h3>React</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={90}/>
                     </Skill>
                     <Skill>
                         <h3>Typescript</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={60}/>
                     </Skill>
                     <Skill>
                         <h3>GIT</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={85}/>
                     </Skill>
                     <Skill>
                         <h3>GIT Flow</h3>
-                        <ProgressBar percentage={40}/>
+                        <ProgressBar percentage={85}/>
                     </Skill>
 
                 </div>

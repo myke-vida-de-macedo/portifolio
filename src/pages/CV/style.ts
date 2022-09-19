@@ -4,6 +4,7 @@ export const HomeStyled = styled.div`
     box-sizing: border-box;
 
     width:100%;
+    max-width: 790px;
     height: 100%;
     min-height: 100vh;
 
@@ -87,8 +88,6 @@ export const Organization = styled.div`
     width: 100%;
     height: 100%;
 
-    background-color: antiquewhite;
-
     display: flex;
 
     .a{
@@ -99,8 +98,6 @@ export const Organization = styled.div`
 
         display: flex;
         flex-direction: column;
-
-        background-color: aquamarine;
 
         .a__category{
             display: flex;
@@ -116,8 +113,6 @@ export const Organization = styled.div`
 
         display: flex;
         flex-direction: column; 
-
-        background-color: beige;
     }
 `
 
@@ -127,11 +122,9 @@ export const Experience = styled.div`
     width: 100%;
     height: auto;
 
-    background-color: antiquewhite;
-
     display: flex;
 
-    
+    margin: 5px 0px;
     .experience__a{
         box-sizing: border-box;
         
@@ -140,8 +133,6 @@ export const Experience = styled.div`
 
         display: flex;
         flex-direction: column;
-
-        background-color: aqua;
     }
 
     .experience__b{
@@ -153,8 +144,6 @@ export const Experience = styled.div`
 
         display: flex;
         flex-direction: column;
-
-        background-color: violet;
     }
 `
 
