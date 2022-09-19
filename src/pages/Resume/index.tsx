@@ -30,7 +30,7 @@ const Resume = () => {
 
                 <Title margin="60px" position="center">{t("resumeTitle")}</Title>
 
-                <Button size="medium">{t("resumeButtonPDF")}</Button>
+                <Button size="medium" onClick={()=>{}}>{t("resumeButtonPDF")}</Button>
 
                 <Section name={t("resumeCategoryResume")}>
                     <Text>{t("resumeText")}</Text>
