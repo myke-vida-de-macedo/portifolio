@@ -123,7 +123,7 @@ const CV = () => {
                         </div>
                         <div className="experience__b">
                             <Title margin="0px 0px 5px 10px" size="medium">Monior</Title>
-                            <Text margin="0px 0px 20px 10px" color="#222">Como monitor meu papel era é apoio, ajudando os alunos a explorar pontos-chave como organização, comunicação e resolução de desafios.</Text>
+                            <Text margin="0px 0px 20px 10px" color="#222">Como monitor meu papel é apoio, ajudando os alunos a explorar pontos-chave como organização, comunicação e resolução de desafios.</Text>
                         </div>
                     </Experience>
 
