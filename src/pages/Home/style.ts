@@ -1,69 +1,16 @@
 import styled from "styled-components"
 
 export const HomeStyled = styled.div`
-    height: 1610vh;
+    height: 100%;
+    min-height: 100vh;
 
-    .first{
-        
-        background-color: #444444;
-        overflow: hidden;
-    }
+    position: relative;
 
-    .offset{
-        width: 100%;
-        height: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 
-    .a{
-        height: 100%;
+    background-color: #1b2838;
 
-        display: flex;
-
-        align-items: flex-end;
-
-        background-color: #F5F1EA;
-
-        .left-side{
-            width: 50%;
-            height: 100%;
-
-            background-color: #7dbb91;
-        }
-        .right-side{
-            width: 50%;
-            height: 100%;
-
-            .right-image{
-                background-color: #7dbb91;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-
-    .b{
-        background-color: #582534;
-
-        width: 100%;
-        height: 100%;
-    }
-
-    .c{
-        background-color: #0A7397;
-
-        width: 100%;
-        height: 100%;
-    }
-
-    .second{
-        background-color: green;
-    }
-
-    .third{
-        background-color: yellow;
-    }
-
-    .fourth{
-        background-color: blue;
-    }
+    overflow: hidden;
 `

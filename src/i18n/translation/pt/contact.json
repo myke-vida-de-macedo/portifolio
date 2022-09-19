@@ -1,0 +1,15 @@
+{
+    "contactTitle":"Contato Profissional",
+    "contactName":"Nome",
+    "contactLastName":"Sobrenome",
+    "contactEmail":"E-mail",
+    "contactMessage":"Mensagem",
+    "contactButton":"ENVIAR",
+
+    "contactRequiredName":"Nome obrigatorio",
+    "contactRequiredLastName":"Sobrenome obrigatorio",
+    "contactRequiredEmail":"Email obrigatorio",
+    "contactValidEmail":"E-mail invalido",
+    "contactRequiredMessage":"Mensagem obrigatorio",
+    "contactButtonValid":"Dados Invalidos"
+}
