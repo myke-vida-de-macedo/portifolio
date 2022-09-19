@@ -34,7 +34,7 @@ const Header = () => {
     return (
         <Styled>  
             <Limiter layoutPosition="rowExtremity">
-                <Switch onChange={()=> {}}/>
+          
                 <Select 
                     placeholder={i18n.language == "pt" ? "Português" : "English"}
                     arrayOptions={[t("headerSelectEnglish"), t("headerSelectPortuguese")]}
