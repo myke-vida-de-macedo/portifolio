@@ -5,7 +5,11 @@ import Button from "../Button"
 
 import { useNavigate } from "react-router-dom"
 
+import { useTranslation } from "react-i18next"
+
 const Modal = () => {
+
+    const { t } = useTranslation()
 
     const navigate = useNavigate()
     const { animationModal } = useModal()
@@ -30,7 +34,7 @@ const Modal = () => {
                     radius="large"
                     duration={0.70}
                 >
-                    PORTIFOLIO
+                    {t("headerButtonPortfolio")}
                 </Button>
                 <Button
                     axle="x"
@@ -42,7 +46,7 @@ const Modal = () => {
                     radius="large"
                     duration={0.80}
                 >
-                    RESUMO
+                    {t("headerButtonResume")}
                 </Button>
                 <Button
                     axle="x"
@@ -54,7 +58,7 @@ const Modal = () => {
                     radius="large"
                     duration={0.90}
                 >
-                    SOBRE
+                    {t("headerButtonAbout")}
                 </Button>
                 <Button
                     axle="x"
@@ -66,7 +70,7 @@ const Modal = () => {
                     radius="large"
                     duration={1}
                 >
-                    CONTATO
+                    {t("headerButtonContact")}
                 </Button>
             </motion.div>
         </Styled>

@@ -28,8 +28,8 @@ export const data = [
         name:"KenzieHabits", 
         level:"JS Native",
         info:{
-            email:"myke#gmail.com",
-            password:"123456"
+            email:"Em breve",
+            password:"Em breve"
         },
         image:"../assets/KenzieHabits.png", 
         gitHub:"https://github.com/myke-vida-de-macedo/KenzieHabits", 

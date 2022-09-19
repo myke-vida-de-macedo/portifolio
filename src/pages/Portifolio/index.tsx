@@ -10,21 +10,25 @@ import Button from "../../components/Button"
 import { useNavigate } from "react-router-dom"
 import { useProjects } from "../../Provider/Projects"
 
+import { useTranslation } from "react-i18next"
+
 const Portifolio = () => {
 
     const navigate = useNavigate()
 
     const { project, filter } = useProjects()
 
+    const { t } = useTranslation()
+    
     return(
         <Styled>
             <Header/>
             <Block> 
                 <div className="block__navegation">
-                    <h3 className="block__title">Projetos</h3>
+                    <h3 className="block__title">{t("portifolioTitle")}</h3>
                     <Select
                         onClick={( text )=>filter( text )}
-                        arrayOptions={["All", "React", "JS Native", "Crescente", "Decrescente"]}
+                        arrayOptions={[t("portifolioSelectAll"), "React", t("portifolioSelectJavascript"), t("portifolioSelectCrescent"), t("portifolioSelectDescending")]}
                     />
                 </div>
                 <List arrayObj={project}/>
@@ -33,7 +37,7 @@ const Portifolio = () => {
                     onClick={()=>navigate("/home/resume")}
                     marginRigth="200px"
                 >
-                    RESUMO
+                    {t("portifolioButtonResume")}
                 </Button>
 
             </Block>

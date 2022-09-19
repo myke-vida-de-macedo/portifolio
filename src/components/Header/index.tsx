@@ -17,6 +17,8 @@ import { useTranslation } from "react-i18next"
 
 const Header = () => {
 
+
+
     const navigate = useNavigate()
 
     const { 
@@ -27,17 +29,23 @@ const Header = () => {
 
     useEffect(()=>{closeModalInitial()},[])
 
-    const { i18n } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     return (
         <Styled>  
             <Limiter layoutPosition="rowExtremity">
                 <Switch onChange={()=> {}}/>
                 <Select 
-                    arrayOptions={["English", "Português"]}
+                    placeholder={i18n.language == "pt" ? "Português" : "English"}
+                    arrayOptions={[t("headerSelectEnglish"), t("headerSelectPortuguese")]}
                     onClick={( text )=>{
 
-                        const value = text == "English" ? "en" : "pt"
+                        const value = 
+                            text == "English" ? "en" 
+                            : 
+                            text == "Inglês" ? "en"
+                            :
+                            "pt"
 
                         i18n.changeLanguage( value )
                     }}
@@ -49,9 +57,9 @@ const Header = () => {
                     secondAxle="x"
                     firstNegative="-200%"
                     secondNegative="-200%"
-                    firstName="PORTIFOLIO"
+                    firstName={t("headerButtonPortfolio")}
                     firstOnClick={()=>navigate("/home/portifolio")}
-                    secondName="RESUMO"
+                    secondName={t("headerButtonResume")}
                     secondOnClick={()=>navigate("/home/resume")}
                 />
                 <Logo/>
@@ -60,9 +68,9 @@ const Header = () => {
                     secondAxle="x"
                     firstNegative="200%"
                     secondNegative="200%"
-                    firstName="SOBRE"
+                    firstName={t("headerButtonAbout")}
                     firstOnClick={()=>navigate("/home/about")}
-                    secondName="CONTATO"
+                    secondName={t("headerButtonContact")}
                     secondOnClick={()=>navigate("/home/contact")}
                 />
                 <Button 

@@ -9,20 +9,22 @@ import { useState } from "react"
 
 interface IPropsSelect {
     arrayOptions:string[]
-    onClick?:( value:string ) => void
+    onClick?:( value:string ) => void;
+    placeholder?:string;
 }
 
-const Select = ( { arrayOptions, onClick }:IPropsSelect ) => {
+const Select = ( { arrayOptions, onClick, placeholder }:IPropsSelect ) => {
 
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
     const [ name, setName ] = useState<string>(arrayOptions[0] as string)
+
 
     return(
         <Styled 
             onBlur={()=> isOpen&&setIsOpen(false)}
             onFocus={()=> !isOpen&&setIsOpen(true)}
         >
-            <p className="select__name">{ name }</p>
+            <p className="select__name">{ placeholder ? placeholder : name }</p>
             {
                 isOpen ? <IoIosArrowUp/> : <IoIosArrowDown/>
             }
