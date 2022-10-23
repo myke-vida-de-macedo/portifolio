@@ -23,9 +23,9 @@ export const ProjectsProvider = ( { children }:IPropsProjectsProvider ) => {
             setProject(data)
         }
 
-        if( category === "React" || category === "JS Native" ){
+        if( category === "React" || category.includes("JS")  ){
             
-            const filterProject = data.filter( ({ level }) => level  === category )
+            const filterProject = data.filter( ({ level }) => category.includes("JS") ? level.includes("JS") : level.includes(category))
 
             if( filterProject.length != 0 ){
                 setProject(filterProject)
