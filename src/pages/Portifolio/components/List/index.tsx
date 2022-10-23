@@ -17,7 +17,6 @@ export interface IProject {
 interface IInfo {
     email:string;
     password:string;
-    authorization:string;
 }
 
 const List = ( { arrayObj }:IPropsList ) => {
