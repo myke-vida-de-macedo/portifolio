@@ -19,7 +19,7 @@ export const ProjectsProvider = ( { children }:IPropsProjectsProvider ) => {
     const [ project, setProject ] = useState([...data])
     const filter = ( category:string ) => {
 
-        if( category === "All" ){
+        if( category === "All" || category === "Todos"){
             setProject(data)
         }
 
