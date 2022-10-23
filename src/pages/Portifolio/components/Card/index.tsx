@@ -46,18 +46,7 @@ const Card = ( { Project:{ image, vercel, gitHub, name, info } }:IPropsCard ) =>
                         target="_blank"
                     >
                         <AiFillGithub/>
-                        {hoverGit&&<Info
-                            style={
-                                hoverGit ? {
-                                    opacity: 1,
-                                }:
-                                {
-                                    opacity: 0,
-                                }
-                            }  
-                        >
-                            <p>Autorização: {info?.authorization}</p>
-                        </Info>}
+                 
                     </Link>
                     {info&&<Link 
                         onMouseEnter={()=>setHoverInfo(true)}
@@ -76,7 +65,6 @@ const Card = ( { Project:{ image, vercel, gitHub, name, info } }:IPropsCard ) =>
                         >
                             {info.email != "" && <p>Email: {info.email}</p>}
                             {info.password != "" && <p>Senha: {info.password}</p>}
-                            <p>Autorização: {info.authorization}</p>
                         </Info>}
                     </Link>}
                 </div>
